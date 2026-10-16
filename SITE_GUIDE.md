@@ -18,7 +18,7 @@ GitHub, LinkedIn, email, LeetCode, and Deep-ML links appear together in the stic
 
 Edit the original Overleaf project and recompile it. The main source is `cv_4.tex`, which uses `resume.cls`. The contact row includes a clickable Website label. Each project title and its link icon point to that project's GitHub repository.
 
-Download the freshly compiled PDF and replace `files/sumit-singh-resume.pdf`. Check that it still has one page and that the website, LinkedIn, GitHub, project, and tutorial hyperlinks work. The website keeps the public PDF filename stable, so future updates do not require changing its two resume links.
+Download the freshly compiled PDF and replace `files/sumit-singh-resume.pdf`. Check that it still has one page and that the website, LinkedIn, GitHub, project, and tutorial hyperlinks work. The website keeps the public PDF filename stable. Update the `v` date in its two homepage links when publishing a new PDF so visitors receive the latest copy. Preserve the explicit `\item[]` in each experience subsection when editing its existing list structure.
 
 ## Preview
 
