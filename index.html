@@ -85,7 +85,7 @@
         <div class="section-label"><span aria-hidden="true">👋</span><h2 id="about-title">A little about me</h2><span class="section-number">01 /</span></div>
         <div class="section-body about-copy">
           <h3>From building in production<br>to asking new questions.</h3>
-          <p>I'm an AI/ML and software engineer with four years of experience at Goldman Sachs, where I worked on conversational AI, intent classification, and the systems behind them. That work gave me hands-on experience taking models from data preparation through deployment and monitoring.</p>
+          <p>I'm an AI/ML and software engineer with four years of experience at Goldman Sachs, building conversational AI and the systems behind it. My work spans intent classification, language-model fine-tuning, retrieval, and production engineering.</p>
           <p>I'm now pursuing my MSc in Applied Computing, with an AI concentration, at the University of Toronto. I'm interested in <strong>model architectures, representation learning, and training methods</strong>. I want to deepen those foundations and contribute to work on new models across different application areas.</p>
           <p>I'm looking for research and engineering opportunities where I can develop that understanding, explore model ideas, and bring a practical perspective from building production systems.</p>
           <div class="interest-line"><span class="small-label">EXPLORING</span><span>Model architectures</span><span>Representation learning</span><span>Training & optimization</span></div>
@@ -113,15 +113,15 @@
               <span class="expand-icon" aria-hidden="true"></span>
             </summary>
             <div class="experience-content">
-              <p>Worked on conversational AI across data preparation, model development, deployment, and monitoring. My work included a BERT intent-classification layer alongside Amazon Lex, plus the testing and operational tooling around the bot.</p>
+              <p>Built conversational AI for customer phone support, combining intent classification, language-model fine-tuning, and retrieval to support self-service and assist agents.</p>
               <details class="experience-deep-dive"><summary>Engineering details <span aria-hidden="true">↗</span></summary>
                 <dl class="experience-topics">
-                <div><dt>Natural-language phone support</dt><dd>Developed and deployed an interactive voice response system that let customers describe what they needed across more than 60 business intents. The implementation brought together Amazon Lex, Go-based AWS Lambda functions, and Java microservices. I also upgraded the Lex speech-recognition integration from ASR 1.0 to ASR 2.0 to improve transcription and intent classification.</dd></div>
-                <div><dt>Fine-tuning BERT for real customer language</dt><dd>Collected and analyzed production utterances to identify the business intent each request should map to, then curated a dataset for fine-tuning. Developed and tuned an in-house BERT intent classifier using that data, including parameter-efficient fine-tuning, and added it as an additional classification layer over Amazon Lex.</dd></div>
-                <div><dt>Making the model practical to serve</dt><dd>Applied quantization to make BERT inference faster and enable the model to run on a smaller GPU, reducing the compute needed to serve the additional classification layer and its associated cost.</dd></div>
-                <div><dt>Call summarization with Amazon Bedrock</dt><dd>Contributed to integrating an existing Bedrock model for call-transcript summarization into the AWS workflow alongside Lex, Lambda, and CloudWatch. Refined prompts with example inputs and desired summaries to guide the content and format. The summaries were designed to help agents catch up on a customer's conversation with the bot without repeating questions, and to support production-data reviews for customer pain points and potential improvements. The integration shipped to production shortly before I left.</dd></div>
-                <div><dt>Monitoring the system in production</dt><dd>Designed an automated alerting system that combined log analysis with live performance metrics to monitor the IVR bot and identify behavior that needed attention.</dd></div>
-                <div><dt>Regression testing for the bot</dt><dd>Built a scheduled, end-to-end testing workflow with AWS Lambda, Node.js, and Step Functions to process more than 3,000 test utterances each week. The workflow generated reports on model and bot issues, making regression checks part of maintaining the conversational system.</dd></div>
+                <div><dt>Natural-language phone support</dt><dd>Developed and deployed an interactive voice response system using Amazon Lex, Go-based AWS Lambda functions, and Java microservices, enabling customers to describe their needs across more than 60 business intents. Upgraded the Lex speech-recognition integration from ASR 1.0 to ASR 2.0 to improve transcription and downstream intent classification.</dd></div>
+                <div><dt>Intent classification and model fine-tuning</dt><dd>Developed and evaluated DistilBERT and Llama models for customer-intent classification, using real production utterances to build a fine-tuning dataset for an additional classification layer alongside Amazon Lex. Explored LoRA and QLoRA for Llama adaptation and experimented with quantization to manage memory and compute requirements. Selected DistilBERT for its balance of accuracy and inference speed: it outperformed the smaller Llama model, while larger Llama models offered better accuracy at the cost of slower inference.</dd></div>
+                <div><dt>RAG for agent assistance</dt><dd>Developed a speech-to-text retrieval-augmented generation workflow to help agents answer customer questions without manually searching FAQs and documentation. Prepared the source material for the retrieval database and connected customer-question transcripts to relevant reference content and generated answer suggestions for agents to read out. Evaluated retrieval relevance and answer quality during inference to assess how well the suggestions addressed customer questions.</dd></div>
+                <div><dt>Call summarization with Amazon Bedrock</dt><dd>Helped integrate Bedrock-based call-transcript summarization with Lex, Lambda, and CloudWatch, refining prompts with example conversations and target summaries to capture relevant context in a consistent format. These summaries supported agent handoffs by conveying the customer's conversation with the bot and helped teams review recurring pain points and opportunities to improve the service.</dd></div>
+                <div><dt>Monitoring the system in production</dt><dd>Designed automated alerting for the IVR bot using log analysis and live performance metrics. The system brought operational signals together to flag behavior that needed investigation and support ongoing monitoring of the customer-facing service.</dd></div>
+                <div><dt>Regression testing for the bot</dt><dd>Built a scheduled testing workflow with AWS Lambda, Node.js, and Step Functions to exercise the conversational system against more than 3,000 test utterances each week. Automated reports highlighted model and bot issues, providing a repeatable way to check for regressions as the system evolved.</dd></div>
                 </dl>
               </details>
               <p class="impact-context">Bot-level impact I contributed to</p>
@@ -130,7 +130,7 @@
                 <div><strong>~600K</strong><span>customer calls / month</span></div>
                 <div><strong>$5M+</strong><span>quarterly savings</span></div>
               </div>
-              <div class="tag-list" aria-label="Technologies"><span>NLP</span><span>BERT</span><span>Fine-tuning</span><span>Quantization</span><span>Amazon Lex</span><span>Amazon Bedrock</span><span>CloudWatch</span><span>Go</span><span>Java</span><span>Node.js</span><span>AWS</span></div>
+              <div class="tag-list" aria-label="Technologies"><span>NLP</span><span>DistilBERT</span><span>Llama</span><span>LoRA / QLoRA</span><span>RAG</span><span>Speech-to-text</span><span>Fine-tuning</span><span>Quantization</span><span>Amazon Lex</span><span>Amazon Bedrock</span><span>CloudWatch</span><span>Go</span><span>Java</span><span>Node.js</span><span>AWS</span></div>
             </div>
           </details>
           <details class="experience-item" open>
@@ -143,9 +143,8 @@
             <div class="experience-content">
               <p>Built Python automation to collect data from airline websites and prepare inputs for an internal analytics and optimization tool, with minimal manual intervention.</p>
               <dl class="experience-topics">
-                <div><dt>Adapting to different airline websites</dt><dd>Collecting information across airline websites was time-consuming because each site presented its data differently. I wrote scripts tailored to individual airline clients' websites to download information such as flight schedules, fares, fleet details, capacity, and occupancy with minimal human intervention.</dd></div>
-                <div><dt>Converting collected data into the required template</dt><dd>The scripts also transformed the collected data into the template required by the internal tool. This connected downloading and formatting in one workflow, reducing the manual preparation needed to feed the tool.</dd></div>
-                <div><dt>Contributing to team and client discussions</dt><dd>Participated in reviewing the tool's outputs and discussing potential recommendations with the team and airline clients. I contributed ideas as part of these collaborative discussions about the analysis and its implications for the airline.</dd></div>
+                <div><dt>Airline data automation</dt><dd>Built Python automation to gather schedules, fares, fleet details, capacity, and occupancy from airline websites. Because each website presented information differently, I tailored the collection scripts to individual clients and transformed the results into the format required by an internal analytics and optimization tool. This reduced the manual work involved in gathering and preparing its inputs.</dd></div>
+                <div><dt>Analysis and client collaboration</dt><dd>Participated in reviewing the analytics tool's outputs with the team and airline clients. I contributed to discussions about what the analysis suggested and which recommendations could be useful to the airline, connecting the data-preparation work with its business context.</dd></div>
               </dl>
               <div class="tag-list" aria-label="Technologies"><span>Python</span><span>Data preparation</span><span>Web scraping</span></div>
             </div>
@@ -160,8 +159,8 @@
             <div class="experience-content">
               <p>Contributed to software development and maintenance, with work spanning Java refactoring, unit testing, and client-side API integration.</p>
               <dl class="experience-topics">
-                <div><dt>Unit testing and coverage</dt><dd>Wrote more than <strong>50 JUnit test cases</strong> and resolved edge cases, increasing test coverage from <strong>0% to 83%</strong>.</dd></div>
-                <div><dt>Code maintenance and API integration</dt><dd>Refactored and modularized Java code, and implemented client-side API calls to meet development requirements. The work focused on completing feature and maintenance tasks within the existing application.</dd></div>
+                <div><dt>Unit testing and coverage</dt><dd>Strengthened test coverage for Java application code by writing more than <strong>50 JUnit test cases</strong> and addressing edge cases. The work increased coverage from <strong>0% to 83%</strong>, giving the team a stronger basis for checking application behavior during maintenance.</dd></div>
+                <div><dt>Code maintenance and API integration</dt><dd>Refactored and modularized Java code as part of maintaining the existing application. I also implemented client-side API calls to support feature requirements, contributing across application structure and integration work.</dd></div>
               </dl>
               <div class="tag-list" aria-label="Technologies"><span>Java</span><span>JUnit</span><span>Testing</span><span>Refactoring</span><span>API integration</span></div>
             </div>
