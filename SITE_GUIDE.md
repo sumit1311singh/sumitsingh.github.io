@@ -12,7 +12,7 @@ The portfolio is a static homepage served through this repository's existing Jek
 - `files/sumit-singh-resume.pdf`: the current compiled resume, used by both the view and download links.
 - `_config.yml`: GitHub Pages origin, project path, and template exclusions.
 
-GitHub, LinkedIn, email, LeetCode, and Deep-ML links appear together in the sticky header and in the introduction. Icons retain visible labels on phones. Keep both sets of links in sync when changing a profile URL.
+GitHub, LinkedIn, email, and Resume appear in the profile row below the hero button. That row sticks under the main navigation after it scrolls to the header, then returns below the button when scrolling back. The Deep-ML profile is linked beside the Projects introduction. Icons retain visible labels on phones.
 
 ## Update the resume
 
