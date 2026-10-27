@@ -24,7 +24,8 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    # Ruby 3.1 is available on this runner; ubuntu-latest may advance beyond its support.
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
