@@ -14,6 +14,8 @@ The portfolio is a static homepage served through this repository's existing Jek
 
 GitHub, LinkedIn, email, and Resume appear in the profile row below the hero button. That row sticks under the main navigation after it scrolls to the header, then returns below the button when scrolling back. The Deep-ML profile is linked beside the Projects introduction. Icons retain visible labels on phones.
 
+When publishing changes to `portfolio.css` or `portfolio.js`, bump the `v` value on their links in `index.html` so returning visitors load the new assets together with the new page.
+
 ## Update the resume
 
 Edit the original Overleaf project and recompile it. The main source is `cv_4.tex`, which uses `resume.cls`. The contact row includes a clickable Website label. Each project title and its link icon point to that project's GitHub repository.
