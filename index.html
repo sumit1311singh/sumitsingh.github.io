@@ -56,7 +56,7 @@
               <a href="https://github.com/sumit1311singh" target="_blank" rel="noopener noreferrer"><img class="social-icon monochrome-icon" src="images/brands/github.svg" alt="" width="16" height="16">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
               <a href="https://www.linkedin.com/in/sisumit/" target="_blank" rel="noopener noreferrer"><img class="social-icon monochrome-icon" src="images/brands/linkedin.svg" alt="" width="16" height="16">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
               <a href="mailto:sumit1311singh@gmail.com"><span class="email-emoji" aria-hidden="true">✉️</span>Email <span aria-hidden="true">↗</span></a>
-              <a href="files/sumit-singh-resume.pdf?v=20261027" target="_blank" rel="noopener" aria-label="View resume PDF in a new tab"><span class="resume-emoji" aria-hidden="true">📄</span>Resume <span aria-hidden="true">↗</span></a>
+              <a href="files/sumit-singh-resume.pdf?v=20261102" target="_blank" rel="noopener" aria-label="View resume PDF in a new tab"><span class="resume-emoji" aria-hidden="true">📄</span>Resume <span aria-hidden="true">↗</span></a>
             </nav>
           </div>
         </div>
@@ -84,8 +84,8 @@
             <summary>Tools & technologies <span aria-hidden="true">+</span></summary>
             <dl class="toolkit-grid">
               <div><dt>Programming</dt><dd>Python, Go, Java, C++, SQL, JavaScript</dd></div>
-              <div><dt>Machine learning</dt><dd>PyTorch, TensorFlow, Hugging Face Transformers, scikit-learn, XGBoost</dd></div>
-              <div><dt>Language & retrieval</dt><dd>NLP, fine-tuning, prompt engineering, RAG, ChromaDB, NVIDIA NeMo Guardrails</dd></div>
+              <div><dt>Machine learning</dt><dd>PyTorch, TensorFlow, Hugging Face Transformers, scikit-learn, XGBoost, computer vision</dd></div>
+              <div><dt>Language & retrieval</dt><dd>NLP, fine-tuning, quantization, RAG, ChromaDB, NVIDIA NeMo Guardrails</dd></div>
               <div><dt>Production systems</dt><dd>Amazon Lex, Bedrock, AWS Lambda, CloudWatch, Step Functions, Java microservices</dd></div>
             </dl>
           </details>
@@ -108,13 +108,14 @@
               <details class="experience-deep-dive"><summary>Engineering details <span aria-hidden="true">↗</span></summary>
                 <dl class="experience-topics">
                 <div><dt>Natural-language phone support</dt><dd>Developed and deployed an interactive voice response system using Amazon Lex, Go-based AWS Lambda functions, and Java microservices, enabling customers to describe their needs across more than 60 business intents. Upgraded the Lex speech-recognition integration from ASR 1.0 to ASR 2.0 to improve transcription and downstream intent classification.</dd></div>
-                <div><dt>Intent classification and model fine-tuning</dt><dd>Developed and evaluated DistilBERT and Llama models for customer-intent classification, using real production utterances to build a fine-tuning dataset for an additional classification layer alongside Amazon Lex. Explored LoRA and QLoRA for Llama adaptation and experimented with quantization to manage memory and compute requirements. Selected DistilBERT for its balance of accuracy and inference speed: it outperformed the smaller Llama model, while larger Llama models offered better accuracy at the cost of slower inference.</dd></div>
+                <div><dt>Intent classification and model fine-tuning</dt><dd>Analyzed production utterances to correct intent labels and build a fine-tuning dataset. Fine-tuned DistilBERT and Llama, and tested LoRA and QLoRA for Llama. Deployed quantized DistilBERT as an additional classification layer over Amazon Lex; quantization made inference faster and allowed the model to run on a smaller GPU at lower cost.</dd></div>
                 <div><dt>RAG for agent assistance</dt><dd>Developed a speech-to-text retrieval-augmented generation workflow to help agents answer customer questions without manually searching FAQs and documentation. Prepared the source material for the retrieval database and connected customer-question transcripts to relevant reference content and generated answer suggestions for agents to read out. Evaluated retrieval relevance and answer quality during inference to assess how well the suggestions addressed customer questions.</dd></div>
                 <div><dt>Call summarization with Amazon Bedrock</dt><dd>Helped integrate Bedrock-based call-transcript summarization with Lex, Lambda, and CloudWatch, refining prompts with example conversations and target summaries to capture relevant context in a consistent format. These summaries supported agent handoffs by conveying the customer's conversation with the bot and helped teams review recurring pain points and opportunities to improve the service.</dd></div>
                 <div><dt>Monitoring the system in production</dt><dd>Designed automated alerting for the IVR bot using log analysis and live performance metrics. The system brought operational signals together to flag behavior that needed investigation and support ongoing monitoring of the customer-facing service.</dd></div>
                 <div><dt>Regression testing for the bot</dt><dd>Built a scheduled testing workflow with AWS Lambda, Node.js, and Step Functions to exercise the conversational system against more than 3,000 test utterances each week. Automated reports highlighted model and bot issues, providing a repeatable way to check for regressions as the system evolved.</dd></div>
                 </dl>
               </details>
+              <p>Combined, the RAG assistance and call summaries saved an average of <strong>2 minutes per transferred call</strong>. At 600,000 monthly calls and 75% containment, that corresponds to roughly 150,000 transfers and an estimated <strong>5,000 agent hours per month</strong>. The time saving cannot be assigned to either workflow alone.</p>
               <p class="impact-context">Bot-level impact I contributed to</p>
               <div class="impact-strip" aria-label="Impact of conversational AI work">
                 <div><strong>10 → 75<span>%</span></strong><span>IVR self-service containment</span></div>
@@ -166,11 +167,38 @@
       <section class="section-row" id="projects" aria-labelledby="projects-title">
         <div class="section-label"><span aria-hidden="true">🛠️</span><h2 id="projects-title">Things I've made</h2><span class="section-number">03 /</span></div>
         <div class="section-body">
-          <div class="projects-heading"><p class="section-intro">A few things I've built, and what I'm learning along the way.</p>
+          <div class="projects-heading"><p class="section-intro">Projects I'm building now, alongside earlier work.</p>
             <a class="text-link projects-profile-link" href="https://www.deep-ml.com/profile/OZRFhDg4xDfIFerdqFrVceFI4ax2" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="images/brands/deep-ml.svg" alt="" width="16" height="16">My Deep-ML practice <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
             <div class="project-filters" role="group" aria-label="Browse projects and learning" hidden><button type="button" data-filter="selected" aria-pressed="true">Selected work</button><button type="button" data-filter="earlier" aria-pressed="false">Earlier work</button><button type="button" data-filter="learning" aria-pressed="false">Learning</button><button type="button" data-filter="all" aria-pressed="false">All</button></div>
           </div>
           <div class="project-list">
+            <article class="project" data-category="selected">
+              <div class="project-topline"><span class="project-index">CURRENT PROJECT</span><span class="project-category">Applied ML · Industry partner · Team project</span></div>
+              <h3>Auto-labelling wideband RF recordings.</h3>
+              <p>With Qoherent, my team is building a pipeline that finds signal regions in spectrograms, extracts the corresponding raw IQ samples, and classifies them into 53 known signal classes. We are still improving end-to-end recall and investigating how to reject unknown signals.</p>
+              <div class="project-results"><span><strong>54.44%</strong> detection F1</span><span><strong>22.64%</strong> end-to-end known-signal recall</span></div>
+              <details class="project-details"><summary>Explore the approach <span aria-hidden="true">↗</span></summary>
+                <div class="project-story">
+                  <h4>From spectrogram to signal label</h4>
+                  <p>A U-Net detects signal regions in a spectrogram and converts them into bounding boxes. Each box identifies raw IQ samples for an XCiT classifier, which we fine-tuned from RF-pretrained weights using synthetic recordings.</p>
+                  <h4>Benchmarking against a provided baseline</h4>
+                  <p>On the same 500-recording comparison set, detection F1 rose from 21.39% for the provided NB-det baseline to 54.44% for our pipeline. End-to-end known-signal recall rose from 6.45% to 22.64%. These results are promising but still leave a substantial gap, and the pipeline does not yet reject unknown classes.</p>
+                </div>
+              </details>
+              <div class="tag-list" aria-label="Technologies"><span>U-Net</span><span>XCiT</span><span>Computer vision</span><span>RF signals</span><span>PyTorch</span></div>
+            </article>
+            <article class="project" data-category="selected">
+              <div class="project-topline"><span class="project-index">CURRENT PROJECT</span><span class="project-category">Robot learning · Course project · Team project</span></div>
+              <h3>Testing how a world model guides robot actions.</h3>
+              <p>My team is investigating whether pairwise outcome-ranking supervision helps a world model choose among action sequences proposed by a behavior-cloning policy trained on robot-lifting demonstrations. The project is in progress; evaluation is planned in MuJoCo.</p>
+              <details class="project-details"><summary>Explore the question <span aria-hidden="true">↗</span></summary>
+                <div class="project-story">
+                  <h4>Choosing actions, then testing generalization</h4>
+                  <p>The policy proposes possible action sequences. We are studying whether a world model trained to rank their outcomes can select better ones. The planned evaluation includes cube positions held out from training, so we can see how the method behaves beyond the demonstrations it learned from.</p>
+                </div>
+              </details>
+              <div class="tag-list" aria-label="Technologies"><span>Imitation learning</span><span>Behavior cloning</span><span>World models</span><span>MuJoCo</span></div>
+            </article>
             <article class="project" data-category="selected">
               <div class="project-topline"><span class="project-index">SELECTED PROJECT</span><span class="project-category">Generative AI · Personal prototype</span></div>
               <h3>A physics tutor with textbook context.</h3>
@@ -257,7 +285,7 @@
         <div class="contact-actions"><a class="contact-email" href="mailto:sumit1311singh@gmail.com">sumit1311singh@gmail.com</a><button class="copy-email" type="button" data-email="sumit1311singh@gmail.com" aria-label="Copy email address" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></button></div>
         <span class="copy-status" role="status" aria-live="polite"></span>
         <p class="academic-contact">For academic conversations: <a href="mailto:sisumit.singh@mail.utoronto.ca">sisumit.singh@mail.utoronto.ca <span aria-hidden="true">↗</span></a></p>
-        <div class="contact-socials"><a href="https://www.linkedin.com/in/sisumit/" target="_blank" rel="noopener noreferrer"><img class="social-icon monochrome-icon" src="images/brands/linkedin.svg" alt="" width="16" height="16">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a><a href="https://github.com/sumit1311singh" target="_blank" rel="noopener noreferrer"><img class="social-icon monochrome-icon" src="images/brands/github.svg" alt="" width="16" height="16">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a><a href="files/sumit-singh-resume.pdf?v=20261027" download>Download résumé ↓<span class="sr-only"> (PDF)</span></a></div>
+        <div class="contact-socials"><a href="https://www.linkedin.com/in/sisumit/" target="_blank" rel="noopener noreferrer"><img class="social-icon monochrome-icon" src="images/brands/linkedin.svg" alt="" width="16" height="16">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a><a href="https://github.com/sumit1311singh" target="_blank" rel="noopener noreferrer"><img class="social-icon monochrome-icon" src="images/brands/github.svg" alt="" width="16" height="16">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a><a href="files/sumit-singh-resume.pdf?v=20261102" download>Download resume ↓<span class="sr-only"> (PDF)</span></a></div>
       </section>
     </main>
 
