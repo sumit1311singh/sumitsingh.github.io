@@ -82,7 +82,7 @@ h1 em { font-weight: 400; color: var(--accent); }
 .hero-socials-slot.is-stuck .hero-socials { position: fixed; z-index: 9; top: var(--profile-sticky-top, 83px); left: 0; right: 0; justify-content: flex-start; width: 100%; min-height: 46px; margin: 0; padding: 4px max(48px, calc((100vw - 1060px) / 2)); border-block: 1px solid var(--line); background: var(--header-bg); backdrop-filter: blur(12px); }
 .hero-aside { padding-top: 13px; }
 .portrait-wrap { position: relative; margin-bottom: 42px; overflow: hidden; border-radius: 105px 105px 5px 5px; background: #e9e5de; }
-.portrait { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1.12; object-fit: cover; object-position: 61% top; transform: scale(1.8); transform-origin: center top; }
+.portrait { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1.12; object-fit: cover; object-position: 61% top; transform: scale(1.45); transform-origin: center top; }
 .now-note { border-left: 2px solid var(--line); padding-left: 15px; font-size: 11px; }
 .now-note .small-label { font-size: 8px; letter-spacing: 1.25px; }
 .now-note p { margin-top: 7px; font-size: 12px; }
