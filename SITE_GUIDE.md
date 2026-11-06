@@ -7,7 +7,7 @@ The portfolio is a static homepage served through this repository's existing Jek
 - `index.html`: visible copy, links, education, experience, projects, and writing.
 - `assets/css/portfolio.css`: layout, colors, typography, responsive styles, and print styles.
 - `assets/js/portfolio.js`: theme preference, project filters, email copy, and active navigation.
-- `images/sumit-singh-headshot.jpg`: displayed portrait. Update the image path and dimensions in `index.html` if replacing it with a different filename.
+- `images/sumit-singh-headshot-hq.jpg`: displayed portrait. Update the image path and dimensions in `index.html` if replacing it with a different filename.
 - `images/brands/`: local profile icons and official company marks, with source and license information in its README.
 - `files/sumit-singh-resume.pdf`: the current compiled resume, used by both the view and download links.
 - `_config.yml`: GitHub Pages origin, project path, and template exclusions.
